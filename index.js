@@ -65,12 +65,13 @@ async function startTail() {
             default:
               break;
           }
+
+          newLine = colorizer(newLine.slice(3), overrideOptions);
         } catch (err) {
           // ignore
         }
-
-        newLine = colorizer(newLine.slice(3), overrideOptions);
       }
+      
       console.log(newLine);
     });
   } catch (err) {
