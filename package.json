@@ -1,0 +1,17 @@
+{
+  "name": "firebase-emulator-logger",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@logdna/tail-file": "^3.0.0",
+    "json-colorizer": "^2.2.2",
+    "ws": "^8.11.0"
+  }
+}
