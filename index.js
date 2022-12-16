@@ -16,7 +16,7 @@ if (fileIndex <= -1 || !process.argv[fileIndex + 1]) {
 }
 
 const options = {
-  pretty: prettyOff ? false : true,
+  pretty: prettyOff <= -1 ? true : false,
   colors: { STRING_LITERAL: "white" },
 };
 
@@ -47,22 +47,26 @@ async function startTail() {
       if (newLine.startsWith(">") && newLine.endsWith("}")) {
         const overrideOptions = { ...options };
 
-        const json = JSON.parse(newLine.slice(3));
-        switch (json?.severity) {
-          case "INFO":
-            overrideOptions.colors.STRING_KEY = "blue";
-            overrideOptions.colors.BRACE = "blue";
-            break;
-          case "WARNING":
-            overrideOptions.colors.STRING_KEY = "yellow";
-            overrideOptions.colors.BRACE = "yellow";
-            break;
-          case "ERROR":
-            overrideOptions.colors.STRING_KEY = "red";
-            overrideOptions.colors.BRACE = "red";
-            break;
-          default:
-            break;
+        try {
+          const json = JSON.parse(newLine.slice(3));
+          switch (json?.severity) {
+            case "INFO":
+              overrideOptions.colors.STRING_KEY = "blue";
+              overrideOptions.colors.BRACE = "blue";
+              break;
+            case "WARNING":
+              overrideOptions.colors.STRING_KEY = "yellow";
+              overrideOptions.colors.BRACE = "yellow";
+              break;
+            case "ERROR":
+              overrideOptions.colors.STRING_KEY = "red";
+              overrideOptions.colors.BRACE = "red";
+              break;
+            default:
+              break;
+          }
+        } catch (err) {
+          // ignore
         }
 
         newLine = colorizer(newLine.slice(3), overrideOptions);

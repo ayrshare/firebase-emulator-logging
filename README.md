@@ -18,3 +18,5 @@ Enjoy the logging!
 | --file    | Location of the Firebase emulator saved output                                  | Yes      |
 | --quiet   | Remove lines with "function, hosting, storage, and pubsub" to clean up the logs | No       |
 | --pretty  | Turn off pretty formatting of the logs. Default 'true'                          | No       |
+
+Bought to you by [Ayrshare Social API](https://www.ayrshare.com)
