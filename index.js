@@ -71,7 +71,7 @@ async function startTail() {
           // ignore
         }
       }
-      
+
       console.log(newLine);
     });
   } catch (err) {

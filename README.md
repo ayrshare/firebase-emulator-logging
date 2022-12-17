@@ -1,13 +1,18 @@
-# Firebase Emulator Logging
+# Enhanced Firebase Emulator Logging
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-Firebase emulator logging is, well, kind of messy. This node app helps clean up the logs with colors, pretty formatting, and quiet to remove data you don't care about.
+Firebase emulator logging is, well, kind of messy. This Node.js app helps clean up the console logs with colors, pretty formatting, and quiet to remove data you don't care about.
 
-1. When running the emulator, save the output to a file. For example: `npm run serve > save.txt`.
-2. Run the Firebase Emulator Logging app with the file as input. `node index.js --file ./save.txt`
+See examples and more details on the article [How to Enhance Firebase Emulator Logs](https://www.ayrshare.com/how-to-enhance-firebase-emulator-logs/).
+
+## Setup
+
+1. Clone this repository.
+2. Run the Firebase emulator andsave the output to a file. For example: `npm run serve > save.txt`.
+3. Run the Enhanced Firebase Emulator Logging app with the file as input. `node index.js --file ./save.txt`
 
 Enjoy the logging!
 
