@@ -11,7 +11,7 @@ See examples and more details on the article [How to Enhance Firebase Emulator L
 ## Setup
 
 1. Clone this repository.
-2. Run the Firebase emulator andsave the output to a file. For example: `npm run serve > save.txt`.
+2. Run the Firebase emulator andsave the output to a file. For example: `firebase emulators:start > save.txt` or `npm run serve > save.txt`.
 3. Run the Enhanced Firebase Emulator Logging app with the file as input. `node index.js --file ./save.txt`
 
 Enjoy the logging!
