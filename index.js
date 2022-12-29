@@ -36,7 +36,7 @@ async function startTail() {
 
     linesplitter.on("line", (line) => {
       if (
-        quiet &&
+        quiet >= 0 &&
         QUIET_STRING.some((str) =>
           new RegExp(`(?<=^...)(.*)${str}`, "gm").test(line)
         )
