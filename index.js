@@ -2,7 +2,7 @@ import readline from "readline";
 import TailFile from "@logdna/tail-file";
 import colorizer from "json-colorizer";
 
-const QUIET_STRING = ["functions", "hosting", "storage", "pubsub"];
+const QUIET_STRING = ["functions:", " hosting:", "storage:", "pubsub:"];
 
 const quiet = process.argv.indexOf("--quiet");
 const prettyOff = process.argv.indexOf("--pretty-off");
