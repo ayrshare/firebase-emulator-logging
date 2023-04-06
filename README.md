@@ -18,7 +18,7 @@ Enjoy the logging!
 
 ## Parameters
 
-| Paremeter | Description                                                                     | Required |
+| Parameter | Description                                                                     | Required |
 | --------- | ------------------------------------------------------------------------------- | -------- |
 | --file    | Location of the Firebase emulator saved output                                  | Yes      |
 | --quiet   | Remove lines with "function, hosting, storage, and pubsub" to clean up the logs | No       |
